@@ -142,12 +142,23 @@
     }
     &__social-link--instagram::before{
             background-image: url('../images/icons/instagram.svg');
+            width: 14px;
+            height: 14px;
+            top: 4px;
     }
     &__social-link--pinterest::before{
             background-image: url('../images/icons/pinterest.svg');
     }
+    &__social-link--pinterest::before{
+        background-image: url('../images/icons/whatsapp.svg');
+        width: 14px;
+        height: 14px;
+}
     &__social-link--youtube::before{
         background-image: url('../images/icons/youtube.svg');
+        width: 18px;
+        height: 12px;
+        top: 4px;
     }
 
 
@@ -166,10 +177,7 @@
     &__social-link,
     &__menu-link{
         color: #707070;
-    }
-    
-    
-
+    } 
   
    &__copyright{
     text-align: center;
@@ -178,5 +186,72 @@
     background-color:  $title;
     }
 }
+.rightside-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 694px;
+//   width: 100%;
+    background-color: #fff;
+    padding-top: 40px;
+    box-shadow: -2px 3px 17px 0px #000;
+    transition: all .3s; 
+    &.rightside-menu--close{
+        transform: translateX(300%);
+    }
+    &__close{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        margin-left: 50px;
+        margin-bottom: 60px;
+    }
+    &__content{
+        text-align: center;
+        max-width: 485px;
+        margin: 0 auto;
+    }
+    &__logo{
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+    &__title{
+        @extend %title-font;
+        color: $title;
+        font-size: 36px;
+        line-height: 51px; 
+        position: relative;
+        margin-bottom: 17px;
+        padding-bottom: 17px;
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-width: 252px;
+            margin: 0 auto;
+            height: 1px;
+            background-color: #6d7278;
+        }
+    }
+    &__text{
+        margin-bottom: 75px;
+    }
+    &__images{
+        max-width: 485px;
+        max-height: 374px;
+        object-fit: center;
+    }
+}
+.top{
+    
+}
+
+
+
+
 
 @import 'media';
