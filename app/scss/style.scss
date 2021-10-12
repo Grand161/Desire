@@ -249,8 +249,6 @@
     }
 }
 .top-slider{
-   
- 
     &__inner{
         padding-bottom: 90px;
         position: relative;
@@ -302,6 +300,201 @@
     }
 
 }
+
+.new-collection{
+    padding: 45px 0 105px;
+    text-align: center;
+    &__title{
+        @extend %title-font;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        font-size: 36px;
+        line-height: 51px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+             bottom: 0;
+            width: 252px;
+            height: 1px;
+            background: #6D7278;
+        }
+    }
+    &__text{
+        max-width: 730px;
+        text-align: center;
+        margin: 0 auto 30px;
+    }
+}
+.collection{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+    &__item{
+        position: relative;
+        &:hover{
+            .collection__info{
+                opacity: 1;
+            }
+        }
+    }
+    &__images{
+        min-height: 350px;
+        object-fit: cover;
+        height: auto;
+    }
+    &__info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba( #FFF, .7);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all .5s;
+    }
+    &__info-title{
+        @extend %title-font;
+        font-size: 20px;
+        line-height: 25px;
+        padding-bottom: 19px;
+        margin-bottom: 19px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 80%;
+            height: 1px;
+            margin: 0 auto;
+            background: #6D7278;
+        }
+    }
+    &__info-text{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 28px;
+        color: #707070;
+    }
+}
+.decor{
+    padding: 170px 0 155px;
+   
+    background-image: url('../images/decor-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+&__title{
+    @extend %title-font;
+    max-width: 475px;
+    font-size: 60px;
+    line-height: 80px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 200px;
+        background: #6D7278;
+    }
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 540px;
+  }
+}
+.works-path{
+    padding: 80px 0 30px;
+    &__title{
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 51px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &__items-box{
+        display: flex;
+        align-items: flex-end;
+        border-bottom: 2px solid rgba(#363838, .7 );
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #363838;
+        }
+    }
+    &__item{
+        width: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+    }
+    &__item--production,
+    &__item--consultation{
+        padding-bottom: 38px;
+    }
+    &__item--production{
+        margin-left: 317px;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 2px;
+            height: 20px;
+            background: rgba( #363838, .7);
+        }
+    }
+    &__item--measuring{
+        padding-top: 38px;
+        margin-left: 305px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 20px;
+            background: rgba( #363838, .7);
+        }
+    }
+    &__item-title{
+        @extend %title-font;
+        font-size: 16px;
+        line-height: 23px;
+        margin-left: 13px;
+    }
+    &__item-text{
+        margin-top: 13px;
+    }
+
+}
+
+
+
+
+
 
 
 
