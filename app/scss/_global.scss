@@ -53,3 +53,25 @@ body{
         }
     }
 }
+.info-email{
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    color: $title;
+        &::before{
+            content: '';
+            background-image: url('../images/icons/email.svg');
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 9px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 16px;
+            height: 12px;
+        }
+}

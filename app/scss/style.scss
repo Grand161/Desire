@@ -74,28 +74,7 @@
         margin-bottom: 15px;
         max-width: 475px;
     }
-    &__info-email{
-        position: relative;
-        display: inline-block;
-        padding-left: 30px;
-        margin-bottom: 20px;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 28px;
-        color: $title;
-            &::before{
-                content: '';
-                background-image: url('../images/icons/email.svg');
-                background-repeat: no-repeat;
-                position: absolute;
-                top: 9px;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 16px;
-                height: 12px;
-            }
-    }
+ 
    &__form{
         display: flex;
   }
@@ -202,6 +181,8 @@
 .breadcrumbs{
     padding: 13px 14px;
     background: rgba( #DFDFDF, .5);
+    position: relative;
+    z-index: 999;
     &__list{
         display: flex;
     }
@@ -756,7 +737,145 @@
         margin: 0 auto;
     }
 }
-
-
+.map{
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+.contact{
+    padding-bottom: 100px;
+    &__title{
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 60px;
+        position: relative;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            height: 2px;
+            background-color: #6D7278;
+        }
+    }
+    .contact__social{
+        padding-left: 284px;
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__social-item+ .contact__social-item{
+        padding-left: 40px;
+    }
+    &__box{
+        max-width: 825px;
+        padding-left: 284px;
+        
+    }
+    &__text{
+        font-size: 16px;
+        line-height: 28px;
+        color: #A1A1A1;
+        margin-bottom: 10px;
+    }
+    &__st{
+        color: #5A5A5A;
+        margin-bottom: 8px;
+    }
+    &__phone{
+        display: inline-block;
+        margin-bottom: 8px;
+        color: #5A5A5A;
+    }
+    &__city{
+        margin-bottom: 16px;
+        color: #5A5A5A;
+    }
+    &__form{
+        padding-left: 284px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__form-input{
+        padding: 6px 17px;
+        border-radius: 20px;
+        border: 1px solid #DFDFDF;
+        margin-bottom: 13px;
+        width: 48%;
+        &::placeholder{
+            font-family: "open Sans", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: #A1A1A1;
+        }
+    }
+    &__form-textarea{
+       width: 100%;
+       min-height: 125px;
+       resize: none;
+       padding: 14px 17px;
+       border: 1px solid #DFDFDF;
+       border-radius: 24px;
+       margin-bottom: 20px;
+       &::placeholder{
+        font-family: "open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #A1A1A1;
+    }
+}
+    &__form-btn{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+        color: #FFFFF0;
+        padding: 6px 60px;
+        border:none;
+        cursor: pointer;
+        border-radius: 21px;
+        background-color: #363838;
+        margin-bottom: 100px;
+    }
+}
+.contact-slider{
+    padding-bottom: 100px;
+    &__link{
+        position: relative;
+        margin-bottom: 20px;
+        &:hover{
+            .contact-slider__title{
+                opacity: 1;
+            }
+        }
+    }
+    &__img{
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+    }
+    &__title{
+        transition: all .5s;
+        position: absolute;
+        padding: 0 15px;
+       text-align: center;
+        @extend %title-font;
+        font-size: 16px;
+        line-height: 22px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(#fff, .6);
+        opacity: 0;
+    }
+  
+}
 
 @import 'media';
