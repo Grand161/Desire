@@ -22,6 +22,15 @@ $(function () {
     slidesToShow: 10,
   });
 
+  $(".article-slider__box").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow:
+      '<button type = "button" class = "article-slider__arrow article-slider__arrowleft"> <img src="images/left-slider.svg" alt="arrow left"></ button>',
+    nextArrow:
+      '<button type = "button" class = "article-slider__arrow article-slider__arrowright"> <img src="images/right-slider.svg" alt="arrow right"></ button>',
+  });
+
   var mixer = mixitup(".gallery__inner", {
     load: {
       filter: ".living",
